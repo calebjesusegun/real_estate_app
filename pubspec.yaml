@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_screenutil: ^5.9.1
   rename: ^2.1.1
   stacked: ^3.4.0
   stacked_services: ^1.1.0
@@ -23,4 +24,24 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: Euclid Circular A
+      fonts:
+        - asset: assets/fonts/Euclid Circular A Light.ttf
+          weight: 300
+        - asset: assets/fonts/Euclid Circular A Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Euclid Circular A Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Euclid Circular A SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Euclid Circular A Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Euclid Circular A Italic.ttf
+
+  assets:
+    - assets/images/
+    - assets/fonts/
+    - assets/
 
