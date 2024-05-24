@@ -1,12 +1,13 @@
-import 'package:real_estate_app/app/app.bottomsheets.dart';
-import 'package:real_estate_app/app/app.dialogs.dart';
-import 'package:real_estate_app/app/app.locator.dart';
-import 'package:real_estate_app/ui/common/app_strings.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 class HomeViewModel extends BaseViewModel {
-  final _dialogService = locator<DialogService>();
-  final _bottomSheetService = locator<BottomSheetService>();
+
+  int _currentNavBarIndex = 2;
+  int get currentNavBarIndex => _currentNavBarIndex;
+
+  updateCurrentIndex(int index){
+    _currentNavBarIndex = index;
+    rebuildUi();
+  }
 
 }

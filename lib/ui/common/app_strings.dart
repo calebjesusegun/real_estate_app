@@ -1,4 +1,3 @@
-
 class AppText {
   static String ksBuy = 'BUY';
   static String ksOffer = 'offers';
@@ -10,6 +9,4 @@ class AppText {
   static String ksRent = 'RENT';
   static String ksOffers = 'offers';
   static String ksUsername = 'Hi, Marina';
-
 }
-
