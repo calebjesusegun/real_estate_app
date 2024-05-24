@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTextStyles {
+
 /* **** Display **** */
 
   static TextStyle displayRegularSize57 = TextStyle(
@@ -97,4 +98,5 @@ static TextStyle labelRegularSize15 = TextStyle(
     fontStyle: FontStyle.normal,
     fontFamily: 'Euclid Circular A',
   );
+
 }

@@ -4,6 +4,7 @@ import 'package:real_estate_app/app/app.bottomsheets.dart';
 import 'package:real_estate_app/app/app.dialogs.dart';
 import 'package:real_estate_app/app/app.locator.dart';
 import 'package:real_estate_app/app/app.router.dart';
+import 'package:real_estate_app/ui/common/app_colors.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 Future<void> main() async {
@@ -26,20 +27,21 @@ class MainApp extends StatelessWidget {
         splitScreenMode: true,
         ensureScreenSize: true,
         builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Real Estate App',
-          theme: ThemeData(
-            fontFamily:'Euclid Circular A',
-          ),
-          initialRoute: Routes.startupView,
-          onGenerateRoute: StackedRouter().onGenerateRoute,
-          navigatorKey: StackedService.navigatorKey,
-          navigatorObservers: [
-            StackedService.routeObserver,
-          ],
-        );
-      }
-    );
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Real Estate App',
+            theme: ThemeData(
+              useMaterial3: true,
+              canvasColor: AppColors.white,
+              fontFamily: 'Euclid Circular A',
+            ),
+            initialRoute: Routes.startupView,
+            onGenerateRoute: StackedRouter().onGenerateRoute,
+            navigatorKey: StackedService.navigatorKey,
+            navigatorObservers: [
+              StackedService.routeObserver,
+            ],
+          );
+        });
   }
 }
