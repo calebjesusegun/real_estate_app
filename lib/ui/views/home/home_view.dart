@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:real_estate_app/ui/views/home/widget/buy_offers_widget.dart';
+import 'package:real_estate_app/ui/views/home/widget/call_to_action_widget.dart';
+import 'package:real_estate_app/ui/views/home/widget/dashboard_image.dart';
+import 'package:real_estate_app/ui/views/home/widget/location_widget.dart';
+import 'package:real_estate_app/ui/views/home/widget/profile_image_widget.dart';
+import 'package:real_estate_app/ui/views/home/widget/rent_offers_widget.dart';
+import 'package:real_estate_app/ui/views/home/widget/username_widget.dart';
 import 'package:stacked/stacked.dart';
 import 'package:real_estate_app/ui/common/app_colors.dart';
 import 'package:real_estate_app/ui/common/ui_helpers.dart';
-
 import 'home_viewmodel.dart';
 
 class HomeView extends StackedView<HomeViewModel> {
@@ -15,62 +22,87 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(0.0),
+        child: AppBar(
+          backgroundColor: AppColors.dashboardBackgroundColor,
+        ),
+      ),
+      backgroundColor: AppColors.dashboardBackgroundColor2,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                verticalSpaceLarge,
-                Column(
-                  children: [
-                    const Text(
-                      'Hello, STACKED!',
-                      style: TextStyle(
-                        fontSize: 35,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                    verticalSpaceMedium,
-                    MaterialButton(
-                      color: Colors.black,
-                      onPressed: viewModel.incrementCounter,
-                      child: Text(
-                        viewModel.counterLabel,
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(colors: [
+                    AppColors.dashboardBackgroundColor,
+                    AppColors.dashboardBackgroundColor2,
+                  ], begin: Alignment.center, end: Alignment.bottomCenter),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    MaterialButton(
-                      color: AppColors.gray01,
-                      onPressed: viewModel.showDialog,
-                      child: const Text(
-                        'Show Dialog',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: sidePadding, vertical: sidePadding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          /// Location Widget
+                          LocationWidget(),
+
+                          /// Profile Image Widget
+                          ProfileImageWidget(),
+                        ],
                       ),
-                    ),
-                    MaterialButton(
-                      color: AppColors.gray01,
-                      onPressed: viewModel.showBottomSheet,
-                      child: const Text(
-                        'Show Bottom Sheet',
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
+                      SizedBox(
+                        height: 32.h,
                       ),
-                    ),
-                  ],
-                )
-              ],
-            ),
+
+                      /// Username Widget
+                      const UsernameWidget(),
+
+                      /// Call To Action Widget
+                      const CallToActionWidget(),
+
+                      SizedBox(
+                        height: 32.h,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          /// Buy Offers Widget
+                          const Expanded(
+                            child: BuyOffersWidget(),
+                          ),
+
+                          SizedBox(
+                            width: 12.w,
+                          ),
+
+                          /// Rent Offers Widget
+                          const Expanded(
+                            child: RentOffersWidget(),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 24.h,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              /// Dashboard Image Widget
+              const DashboardImageWidget(),
+            ],
           ),
         ),
       ),

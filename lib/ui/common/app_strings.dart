@@ -1,3 +1,15 @@
-const String ksHomeBottomSheetTitle = 'Build Great Apps!';
-const String ksHomeBottomSheetDescription =
-    'Stacked is built to help you build better apps. Give us a chance and we\'ll prove it to you. Check out stacked.filledstacks.com to learn more';
+
+class AppText {
+  static String ksBuy = 'BUY';
+  static String ksOffer = 'offers';
+  static String ksLetsSelect = 'let\'s select your';
+  static String ksPerfectPlace = 'perfect place';
+  static String ksAddress1 = 'Gladkova St., 25';
+  static String ksAddress2 = 'Saint Petersburg';
+  static String ksAddress3 = 'Trevola St., 22';
+  static String ksRent = 'RENT';
+  static String ksOffers = 'offers';
+  static String ksUsername = 'Hi, Marina';
+
+}
+

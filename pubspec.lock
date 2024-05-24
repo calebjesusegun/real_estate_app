@@ -251,6 +251,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.7.0"
+  glass_kit:
+    dependency: "direct main"
+    description:
+      name: glass_kit
+      sha256: "5cbf3c979089ebac808856a0f8e6161f0d302b71dfc18766fa40c25b87dfc304"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   glob:
     dependency: transitive
     description:
@@ -283,6 +291,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  iconsax_flutter:
+    dependency: "direct main"
+    description:
+      name: iconsax_flutter
+      sha256: "95b65699da8ea98f87c5d232f06b0debaaf1ec1332b697e4d90969ec9a93037d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   io:
     dependency: transitive
     description:
