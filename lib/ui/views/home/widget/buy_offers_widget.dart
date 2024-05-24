@@ -13,12 +13,10 @@ class BuyOffersWidget extends StatefulWidget {
   State<BuyOffersWidget> createState() {
     return _BuyOffersWidgetState();
   }
-
 }
 
 class _BuyOffersWidgetState extends State<BuyOffersWidget>
     with SingleTickerProviderStateMixin {
-
   late AnimationController _controller;
   late Animation<double> _animation;
   late Animation<int> _animation2;

@@ -3,14 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../common/app_images.dart';
 
 class ProfileImageWidget extends StatefulWidget {
-  const ProfileImageWidget({Key? key,}) : super(key: key);
+  const ProfileImageWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<ProfileImageWidget> createState() {
     return _ProfileImageWidgetState();
   }
-
-
 }
 
 class _ProfileImageWidgetState extends State<ProfileImageWidget>

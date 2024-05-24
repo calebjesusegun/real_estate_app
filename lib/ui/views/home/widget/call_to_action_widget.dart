@@ -14,7 +14,6 @@ class CallToActionWidget extends StatefulWidget {
   State<CallToActionWidget> createState() {
     return _CallToActionWidgetState();
   }
-
 }
 
 class _CallToActionWidgetState extends State<CallToActionWidget>
@@ -32,9 +31,8 @@ class _CallToActionWidgetState extends State<CallToActionWidget>
 
     final curve =
         CurvedAnimation(curve: Curves.decelerate, parent: _animController);
-    _animOffset =
-        Tween<Offset>(begin: const Offset(0.0, 0.1), end: Offset.zero)
-            .animate(curve);
+    _animOffset = Tween<Offset>(begin: const Offset(0.0, 0.1), end: Offset.zero)
+        .animate(curve);
 
     _animOffset2 =
         Tween<Offset>(begin: const Offset(0.0, 0.3), end: Offset.zero)
@@ -73,20 +71,20 @@ class _CallToActionWidgetState extends State<CallToActionWidget>
               ),
             ),
           ),
-      FadeTransition(
-        opacity: _animController,
-        child: SlideTransition(
-          position: _animOffset2,
-            child: Text(
-              AppText.ksPerfectPlace,
-              style: AppTextStyles.titleRegularSize16.copyWith(
-                  fontSize: 36.sp,
-                  height: 1.h,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.black01),
+          FadeTransition(
+            opacity: _animController,
+            child: SlideTransition(
+              position: _animOffset2,
+              child: Text(
+                AppText.ksPerfectPlace,
+                style: AppTextStyles.titleRegularSize16.copyWith(
+                    fontSize: 36.sp,
+                    height: 1.h,
+                    fontWeight: FontWeight.w400,
+                    color: AppColors.black01),
+              ),
             ),
           ),
-      ),
         ],
       ),
     );
