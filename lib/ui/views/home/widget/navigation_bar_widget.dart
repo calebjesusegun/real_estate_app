@@ -30,13 +30,6 @@ class _NavigationBarWidgetState extends State<NavigationBarWidget>
     Future.delayed(const Duration(seconds: 8), () {
       _controller!.forward();
     });
-    // _delayDisplay();
-  }
-
-  void _delayDisplay() async {
-    await Future.delayed(
-      const Duration(seconds: 8),
-    );
   }
 
   @override
