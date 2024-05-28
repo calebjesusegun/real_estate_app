@@ -41,6 +41,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-# /android/app/src/main/res/values/googleMapsApi.xml
-# /ios/Flutter/Debug.xcconfig
-# /ios/Flutter/Release.xcconfig
+/android/app/src/main/res/values/googleMapApi.xml
+/ios/Flutter/Debug.xcconfig
