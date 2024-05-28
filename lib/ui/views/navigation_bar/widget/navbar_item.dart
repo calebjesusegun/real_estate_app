@@ -65,7 +65,7 @@ class _NavBarItemState extends State<NavBarItem>
               width: sizeAnimation.value,
               decoration: widget.isSelected
                   ? BoxDecoration(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(30),
                       color: AppColors.primary01,
                     )
                   : null,
@@ -77,7 +77,7 @@ class _NavBarItemState extends State<NavBarItem>
               padding: widget.isSelected
                   ? null
                   : EdgeInsets.all(
-                8.w,
+                      8.w,
                     ),
               decoration: widget.isSelected
                   ? null

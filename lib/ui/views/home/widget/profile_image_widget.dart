@@ -46,12 +46,11 @@ class _ProfileImageWidgetState extends State<ProfileImageWidget>
   Widget build(BuildContext context) {
     return ScaleTransition(
       scale: _animation,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(25.r),
-        child: Image.asset(
-          AppImages.profilePicture,
-          width: 50.w,
-        ),
+      child: CircleAvatar(
+        radius: 24.w,
+          backgroundImage: AssetImage(
+            AppImages.profilePicture,
+          ),
       ),
     );
   }

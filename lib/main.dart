@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:real_estate_app/app/app.bottomsheets.dart';
@@ -12,7 +13,13 @@ Future<void> main() async {
   await setupLocator();
   setupDialogUi();
   setupBottomSheetUi();
-  runApp(const MainApp());
+
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (context) => const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {

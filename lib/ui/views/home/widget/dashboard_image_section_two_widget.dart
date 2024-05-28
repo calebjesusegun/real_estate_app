@@ -246,7 +246,6 @@ class _DashboardImageSectionTwoWidgetState
                     borderRadius: BorderRadius.circular(20.r),
                     child: Image.asset(
                       AppImages.dashboardImage4,
-                      // width: (double.infinity / 2) - sidePadding,
                       height: 194.h,
                       fit: BoxFit.fill,
                     ),

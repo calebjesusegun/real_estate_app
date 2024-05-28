@@ -8,6 +8,9 @@ class AppColors {
   static const Color black02 = Color(0xff2b2b2b);
   static const Color black03 = Color(0xff232220);
   static const Color locationIconColor = Color(0xffa4957e);
+  static const Color dropdownBackgroundColor = Color(0xfffbf5eb);
+  static const Color dropdownTextColor = Color(0xff888580);
+  static const Color locationPopupMenuIconColor = Color(0xff737373);
   static const Color gradientColor = Color(0XFFd7c5b6);
   static const Color dashboardBackgroundColor = Color(0xfff8f8f8);
   static const Color dashboardBackgroundColor2 = Color(0xfffadab5);
